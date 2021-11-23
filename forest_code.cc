@@ -16,13 +16,13 @@ typedef struct forest_s forest_t;
 struct node_s {
     int val;
     struct node_s *parent;
-    struct node_s *next_sibling;
+    struct node_s *next_sibling; //connecting all childs of nary tree at same level
     struct node_s *firstchild;
-    struct node_s *next_root;
+    struct node_s *next_root; //connecting all roots in linked list
 };
 
 struct forest_s {
-    struct node_s *roots;
+    struct node_s *roots; //linked list for all roots in forest, we can make hash here for optimization
 };
 
 //internal implementation
